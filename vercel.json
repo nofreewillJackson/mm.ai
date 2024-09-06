@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/j-garden",
+      "destination": "https://publish.obsidian.md/serve?url=malleablemind.ai/j-garden"
+    },
+    {
+      "source": "/j-garden/:path*",
+      "destination": "https://publish.obsidian.md/serve?url=malleablemind.ai/j-garden/:path*"
+    }
+  ]
+}
