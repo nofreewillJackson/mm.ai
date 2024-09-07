@@ -36,39 +36,57 @@ export default function LandingPage() {
           </div>
         </div>
 
-
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-4 gap-6 w-full">
-        {[
-          "https://malleablemind.ai/j-garden",
-          "https://malleablemind.ai/learn",
-          "https://malleablemind.ai/templates",
-          "https://malleablemind.ai/deploy",
-        ].map((href, index) => (
-          <a
-            key={index}
-            href={href}
-            className="group rounded-lg border border-transparent px-6 py-5 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div className="relative w-8 h-8">
-              <Image
-                src="/button1.svg"
-                alt="X"
-                width={32}
-                height={32}
-                className="absolute transition-opacity duration-300 group-hover:opacity-0"
-              />
-              <Image
-                src="/button1_2.svg"
-                alt="Y"
-                width={32}
-                height={32}
-                className="absolute transition-opacity duration-300 opacity-0 group-hover:opacity-100"
-              />
-            </div>
-          </a>
-        ))}
+        {/* Adjusted grid layout and button sizes */}
+        <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-8 justify-items-center w-full max-w-4xl mx-auto">
+          {[
+            "https://malleablemind.ai/j-garden",
+            "https://draw.malleablemind.ai/",
+            "https://malleablemind.ai/project",
+            "https://malleablemind.ai/404",
+          ].map((href, index) => (
+            <a
+              key={index}
+              href={href}
+              className="group flex items-center justify-center"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 flex-shrink-0">
+                {index === 0 ? (
+                  <>
+                    <Image
+                      src="/button1.svg"
+                      alt="X"
+                      fill
+                      className="absolute transition-opacity duration-300 group-hover:opacity-0 object-contain"
+                    />
+                    <Image
+                      src="/button1_2.svg"
+                      alt="Y"
+                      fill
+                      className="absolute transition-opacity duration-300 opacity-0 group-hover:opacity-100 object-contain"
+                    />
+                  </>
+                ) : (
+                  <>
+                    <Image
+                      src="/button2.svg"
+                      alt="X"
+                      fill
+                      className="absolute transition-opacity duration-300 group-hover:opacity-0 object-contain"
+                    />
+                    <Image
+                      src="/button2_2.svg"
+                      alt="Y"
+                      fill
+                      className="absolute transition-opacity duration-300 opacity-0 group-hover:opacity-100 object-contain"
+                    />
+                  </>
+                )}
+              </div>
+            </a>
+          ))}
+        </div>
       </div>
     </main>
   );
