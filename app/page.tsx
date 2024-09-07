@@ -1,4 +1,3 @@
-// app/page.tsx
 import Image from 'next/image';
 
 export default function LandingPage() {
@@ -20,7 +19,7 @@ export default function LandingPage() {
           <div className="definition-container mb-12 text-center sm:text-left w-full max-w-xs sm:max-w-md text-monospace text-blue-400">
             <span className="font-bold">malleable</span> (mal-ee-uh-buhl) <br />
             <span>adj. A canvas for infinite possibilities, forever </span>
-            <span className="unfolding inline-block overflow-hidden whitespace-nowrap border-r-2 border-blue-400 align-bottom">
+            <span className="inline-block overflow-hidden whitespace-nowrap border-r-2 border-blue-400 align-bottom animate-typing">
               unfolding
             </span>
           </div>
@@ -60,38 +59,6 @@ export default function LandingPage() {
           ))}
         </div>
       </div>
-
-      {/* CSS for animations applied using Tailwind's class-based approach */}
-      <style jsx global>{`
-        .unfolding {
-          animation: typing 4s steps(40, end) infinite, blink-caret 0.75s step-end infinite;
-        }
-
-        @keyframes typing {
-          0% {
-            width: 0;
-          }
-          70% {
-            width: 9ch; /* Number of characters in "unfolding" */
-          }
-          85% {
-            width: 9ch; /* Pause */
-          }
-          100% {
-            width: 0; /* Reset */
-          }
-        }
-
-        @keyframes blink-caret {
-          from,
-          to {
-            border-color: transparent;
-          }
-          50% {
-            border-color: #4dabf7;
-          }
-        }
-      `}</style>
     </main>
   );
 }
