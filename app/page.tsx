@@ -41,7 +41,7 @@ export default function LandingPage() {
           {[
             "https://malleablemind.ai/j-garden",
             "https://draw.malleablemind.ai/",
-            "https://malleablemind.ai/project",
+            "https://malleablemind.ai/bot",
             "https://malleablemind.ai/404",
           ].map((href, index) => (
             <a
