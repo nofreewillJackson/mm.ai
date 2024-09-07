@@ -20,7 +20,9 @@ export default function LandingPage() {
           <div className="definition-container mb-12 text-center sm:text-left w-full max-w-xs sm:max-w-md text-monospace text-blue-400">
             <span className="font-bold">malleable</span> (mal-ee-uh-buhl) <br />
             <span>adj. A canvas for infinite possibilities, forever </span>
-            <span id="unfolding" className="unfolding">unfolding</span>
+            <span className="unfolding inline-block overflow-hidden whitespace-nowrap border-r-2 border-blue-400 align-bottom">
+              unfolding
+            </span>
           </div>
 
           <div className="mb-12 w-full max-w-sm sm:max-w-lg">
@@ -59,19 +61,24 @@ export default function LandingPage() {
         </div>
       </div>
 
-      <style jsx>{`
+      {/* CSS for animations applied using Tailwind's class-based approach */}
+      <style jsx global>{`
+        .unfolding {
+          animation: typing 4s steps(40, end) infinite, blink-caret 0.75s step-end infinite;
+        }
+
         @keyframes typing {
           0% {
             width: 0;
           }
           70% {
-            width: 9ch;
+            width: 9ch; /* Number of characters in "unfolding" */
           }
           85% {
-            width: 9ch;
+            width: 9ch; /* Pause */
           }
           100% {
-            width: 0;
+            width: 0; /* Reset */
           }
         }
 
@@ -83,15 +90,6 @@ export default function LandingPage() {
           50% {
             border-color: #4dabf7;
           }
-        }
-
-        .unfolding {
-          display: inline-block;
-          overflow: hidden;
-          white-space: nowrap;
-          animation: typing 4s steps(40, end) infinite, blink-caret 0.75s step-end infinite;
-          border-right: 2px solid #4dabf7;
-          vertical-align: bottom;
         }
       `}</style>
     </main>
