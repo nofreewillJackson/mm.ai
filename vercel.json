@@ -8,5 +8,10 @@
       "source": "/j-garden/:path*",
       "destination": "https://publish.obsidian.md/serve?url=malleablemind.ai/j-garden/:path*"
     }
-  ]
+  ],
+  "functions": {
+    "api/*.go": {
+      "runtime": "vercel-go@0.5.0"
+    }
+  }
 }
